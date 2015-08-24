@@ -34,7 +34,7 @@ class InterfaceController: WKInterfaceController {
             self.updateTable()
             self.table.scrollToRowAtIndex(self.items.count-1)
         }
-        XPNotificationCenter.defaultCenter.addObserver(self, name: NotificationNames.itemListDeleted) { (note) -> () in
+        XPNotificationCenter.defaultCenter.addObserver(self, name: NotificationNames.itemListDeleted) { note in
             println("WatchKit extension received notification: \(note)")
             
             self.updateTable()
